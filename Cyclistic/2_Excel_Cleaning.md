@@ -1,0 +1,21 @@
+# Data processing (Excel)
+
+For further analyses, I created two new columns:
+1.	**ride_length**: the length of each ride calculated by subtracting the column started_at from the column ended_at, formated as HH:MM:SS. Repeated for 12 files;
+
+2.	**day_of_week**: the day of the week that each ride started, calculated using the WEEKDAY command in each file. Formated as a number with no decimals, noting that 1 = Sunday and 7 = Saturday.
+
+# Data cleaning (Excel)
+
+1.	Some entries in the ride_length column displayed an error message: “Dates and times are negative or too large”. Upon investigation, I observed that the start date in these entries preceded the end date, causing the issue. To rectify this, I utilized macros to replace the data in these fields.
+
+![](/Cyclistic/screenshots/cleaning_ride_length.png)
+
+2.	Certain entries in the latitude and longitude fields were formatted as text with apostrophes, potentially leading to import and conversion errors. To address this issue, I corrected the formatting.
+![](/Cyclistic/screenshots/cleaning_geo_data.png)
+
+3.	No duplicates were found in MS Excel.
+ 
+4.	Upon inspection, I noticed some missing values in the start and end stations data. To address these, we will utilize SQL for further analysis in subsequent stages.
+
+5.	For correct import of csv files to MS SQL Studio for further exploration changed formats for each column, for appropriate text, number, date formats. Saved all new files as CSV.
