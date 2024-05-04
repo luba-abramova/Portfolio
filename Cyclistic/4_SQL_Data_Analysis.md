@@ -1,4 +1,4 @@
-# Data analysis with SQL and MSSQL
+# Data analysis with SQL and MS SQL
 At this stage, I conducted a detailed analysis to explore the differences between annual members and casual riders, aiming to identify trends and relationships within the data. 
 
 List of queries:
@@ -84,8 +84,6 @@ FROM mode_day_of_week;
 ```
 10. Average distance per months for member and casual rides:
  ```
- DECLARE @orig geography = geography::Point(@orig_lat, @orig_lng, 4326);
-
 SELECT member_casual, DATENAME(month, started_at) as month,
    ROUND(AVG(geography::Point(start_lat, start_lng, 4326).STDistance(geography::Point(end_lat, end_lng, 4326))), 1) AS distance
 FROM combined_tripdata_2023

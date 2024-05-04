@@ -13,7 +13,7 @@ Let's connect on [LinkedIn](https://www.linkedin.com/in/liubovabramova/) :blush:
 
  Goal: to suggest marketing strategies aimed at converting casual riders into annual members, thus maximizing the number of profitable annual members in the Cyclistic program.
 
-Tools: Excel, SQL, MSSQL, Power BI.
+Tools: Excel, SQL, MS SQL, Power BI.
 
 1. [Introduction](/Cyclistic/1_Introduction.md)
 2. [Excel Data Cleaning](/Cyclistic/2_Excel_Cleaning.md)

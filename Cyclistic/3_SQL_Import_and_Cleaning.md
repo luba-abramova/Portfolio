@@ -68,14 +68,14 @@ ALTER TABLE combined_tripdata_2023
 ALTER COLUMN day_of_week varchar(10);
 
 UPDATE combined_tripdata_2023
-SET day_of_week = CASE
-					WHEN day_of_week = '1' THEN 'Monday'
-					WHEN day_of_week = '2' THEN 'Tuesday'
-					WHEN day_of_week = '3' THEN 'Wednesday'
-					WHEN day_of_week = '4' THEN 'Thursday'
-					WHEN day_of_week = '5' THEN 'Friday'
-					WHEN day_of_week = '6' THEN 'Saturday'
-					ELSE 'Sunday'
-				  END;
+SET day_of_week = CASE 
+    WHEN day_of_week = '1' THEN 'Monday'
+	WHEN day_of_week = '2' THEN 'Tuesday'
+	WHEN day_of_week = '3' THEN 'Wednesday'
+	WHEN day_of_week = '4' THEN 'Thursday'
+	WHEN day_of_week = '5' THEN 'Friday'
+	WHEN day_of_week = '6' THEN 'Saturday'
+	ELSE 'Sunday'
+	END;
 ```
 Finally, our data got ready for analysis.

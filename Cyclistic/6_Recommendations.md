@@ -14,5 +14,3 @@ Based on the analysis, I can conclude, that:
 3. **Promote bike commuting**: highlight the benefits of bike commuting to work, such as cost savings, environmental sustainability, and improved health. Develop targeted marketing campaigns emphasizing how annual memberships facilitate daily commuting.
 4. **Offer exclusive membership benefits**: elevate the membership experience by providing unique privileges like access to summer bike festivals, exclusive discounts at partner locations, and discounted rates for weekend rides. By offering additional value to members, such as exclusive events and savings opportunities, you can incentivize casual riders to transition to annual memberships and enhance their overall experience with Cyclistic.
 
-**Thank you for joining me on this project!**
-
