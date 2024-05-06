@@ -26,7 +26,9 @@ SELECT COUNT(*)
 FROM combined_tripdata_2023;
 ```
 the result: no data was lost :)
-![](/Cyclistic/screenshots/import_count.png)
+| | rows in total|
+|---|---|
+|1|5719877|
 
 # Data cleaning (SQL)
 1.	It's time to decide what to do with NULL values.
