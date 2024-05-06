@@ -22,11 +22,11 @@ SELECT * FROM tripdata_12_2023;
 ```
 Checked the completeness of the data, whether any data was lost during import:
 ```
-SELECT COUNT(*)
+SELECT COUNT(*) as rows
 FROM combined_tripdata_2023;
 ```
 the result: no data was lost :)
-| | rows in total|
+| | rows|
 |---|---|
 |1|5719877|
 
