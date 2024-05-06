@@ -14,7 +14,7 @@ GROUP BY member_casual;
 SELECT member_casual, rideable_type, 
     COUNT(*) AS num_of_trips, 
     ROUND(
-    CAST(COUNT(*) * 100 as float) / 
+        CAST(COUNT(*) * 100 as float) / 
         CAST(SUM(COUNT(*)) over() as float), 
     2) AS percent_of_total
 FROM combined_tripdata_2023
@@ -50,8 +50,7 @@ ORDER BY num_trips DESC;
 6. Average ride length for member and casual rides:
 ```
 SELECT member_casual, 
-    ROUND(
-    AVG(DATEDIFF(SECOND, started_at, ended_at) / 60), 
+    ROUND(AVG(DATEDIFF(SECOND, started_at, ended_at) / 60), 
     2) AS avg_minutes_ride_length
 FROM combined_tripdata_2023
 GROUP BY member_casual;
@@ -59,9 +58,7 @@ GROUP BY member_casual;
 7. Average ride length by day of a week:
 ```
 SELECT member_casual, day_of_week, 
-    AVG(
-    ROUND(
-        DATEDIFF(SECOND, started_at, ended_at) / 60,
+    AVG(ROUND(DATEDIFF(SECOND, started_at, ended_at) / 60,
         1)) AS avg_minutes_ride_length, 
     COUNT(*) AS num_trips
 FROM combined_tripdata_2023
@@ -72,9 +69,7 @@ ORDER BY avg_minutes_ride_length DESC;
 ```
 SELECT member_casual, 
     DATENAME(month, started_at) AS month, 
-    AVG(
-    ROUND(
-        DATEDIFF(SECOND, started_at, ended_at) / 60, 
+    AVG(ROUND(DATEDIFF(SECOND, started_at, ended_at) / 60, 
         1)) AS avg_minutes_ride_length, 
     COUNT(*) AS num_trips
 FROM combined_tripdata_2023
@@ -84,17 +79,14 @@ ORDER BY avg_minutes_ride_length DESC;
 9. Mode day of week - busiest day among member and casual rides:
 ```
 WITH mode_day_of_week AS(
-    SELECT TOP 2
+SELECT TOP 2
     member_casual,
     day_of_week,
-    ROW_NUMBER() OVER (
-        PARTITION BY member_casual 
-        ORDER BY COUNT(day_of_week) DESC
-        ) AS row
-    FROM combined_tripdata_2023
-    GROUP BY member_casual, day_of_week
-    ORDER BY row
-    )
+    ROW_NUMBER() OVER (PARTITION BY member_casual 
+        ORDER BY COUNT(day_of_week) DESC) AS row
+FROM combined_tripdata_2023
+GROUP BY member_casual, day_of_week
+ORDER BY row)
 SELECT member_casual, day_of_week
 FROM mode_day_of_week;
 ```
@@ -102,21 +94,21 @@ FROM mode_day_of_week;
  ```
 SELECT member_casual, DATENAME(month, started_at) as month,
     ROUND(
-    AVG(
-        geography::Point(start_lat, start_lng, 4326)
-        .STDistance(geography::Point(end_lat, end_lng,4326))
-        ),
+        AVG(geography::Point(start_lat, start_lng, 4326)
+        .STDistance(geography::Point(end_lat, end_lng,4326))),
     1) AS distance
 FROM combined_tripdata_2023
-WHERE start_lat IS NOT NULL AND start_lng IS NOT NULL AND end_lat IS NOT NULL AND end_lng IS NOT NULL
+WHERE start_lat IS NOT NULL AND 
+    start_lng IS NOT NULL AND 
+    end_lat IS NOT NULL AND 
+    end_lng IS NOT NULL
 GROUP BY member_casual, DATENAME(month, started_at);
 ```
 11. 50 most popular start stations among members:
 ```
 SELECT TOP 50 
     start_station_name, start_lat, start_lng,
-    SUM(
-        CASE WHEN member_casual = 'member' THEN 1 ELSE 0 
+    SUM(CASE WHEN member_casual = 'member' THEN 1 ELSE 0 
         END) AS members
 FROM combined_tripdata_2023
 WHERE start_station_name IS NOT NULL
@@ -127,8 +119,7 @@ ORDER BY members DESC;
 ```
 SELECT TOP 50 
     start_station_name, start_lat, start_lng,
-    SUM(
-        CASE WHEN member_casual = 'casual' THEN 1 ELSE 0 
+    SUM(CASE WHEN member_casual = 'casual' THEN 1 ELSE 0 
         END) AS casual
 FROM combined_tripdata_2023
 WHERE start_station_name IS NOT NULL
@@ -139,8 +130,7 @@ ORDER BY casual DESC;
 ```
 SELECT TOP 50 
     end_station_name, end_lat, end_lng,
-    SUM(
-        CASE WHEN member_casual = 'member' THEN 1 ELSE 0 
+    SUM(CASE WHEN member_casual = 'member' THEN 1 ELSE 0 
         END) AS members
 FROM combined_tripdata_2023
 WHERE end_station_name IS NOT NULL
@@ -151,8 +141,7 @@ ORDER BY members DESC;
 ```
 SELECT TOP 50 
     end_station_name, end_lat, end_lng,
-    SUM(
-        CASE WHEN member_casual = 'casual' THEN 1 ELSE 0 
+    SUM(CASE WHEN member_casual = 'casual' THEN 1 ELSE 0 
         END) AS casual
 FROM combined_tripdata_2023
 WHERE end_station_name IS NOT NULL
