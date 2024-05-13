@@ -22,7 +22,7 @@ Tools: SQL, MS SQL, Excel, and Power BI.
 6. [Recommendations](/Cyclistic/6_Recommendations.md)
 
 ## [Project 2](https://github.com/luba-abramova/Portfolio/blob/main/Bellabeat/1_Introduction.md): Smart Device Data Analysis for Bellabeat
-Analyzed smart device usage data from 35 respondents who utilized Bellabeat's activity tracker, compiled the findings into a comprehensive dashboard, and derived actionable insights to guide the company's marketing strategy.
+Analyzed smart device usage data from 35 respondents who utilized Bellabeat's activity tracker, compiled the findings into a comprehensive [Tableau dashboard](https://public.tableau.com/app/profile/liubov.abramova/viz/Bellabeatusagesummary/Dashboard1), and derived actionable insights to guide the company's marketing strategy.
 
 Tools: Excel, SWL, MS SQL, and Tableau.
 
