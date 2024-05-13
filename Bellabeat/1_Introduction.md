@@ -4,7 +4,7 @@ The project is based on [FitBit Fitness Tracker Data](https://www.kaggle.com/dat
 Tools that I used: SQL, MS SQL, Excel, and interactive visualization in Tableau.
 
 ## Scenario
-I am a data analyst working on the marketing analyst team at Bellabeat, a high-tech manufacturer of health-focused products for women. I have been asked to focus on one of Bellabeat’s products and analyze smart device data to gain insight into how consumers are using their smart devices. The insights will then help guide marketing strategy for the company. 
+I am a data analyst working on the marketing analyst team at Bellabeat, a high-tech manufacturer of health-focused products for women. I have been asked to focus on one of Bellabeat’s activity tracker and analyze smart device data to gain insight into how consumers are using their smart devices. The insights will then help guide marketing strategy for the company. 
 
 ## Goal
 To analyze smart device usage data for one of Bellabeat's products and provide actionable insights to guide the company's marketing strategy.
