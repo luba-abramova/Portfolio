@@ -16,10 +16,17 @@ FROM daily_activity;
 |---|---|
 |1|39|
 
-After that, I assigned individuals to segments:
+After that, I counted the number of active days for each user:
+```
+SELECT user_id, COUNT(DISTINCT date) AS active_days
+FROM daily_activity
+GROUP BY user_id;
+```
+
+Next, I assigned individuals to segments:
 ```
 WITH new_daily_activity AS
-	(SELECT user_id, COUNT(DISTINCT date) AS active_days,
+	(SELECT user_id,
 		CASE WHEN COUNT(*) < 30 THEN 'passive'
 		WHEN COUNT(*) >= 30 AND COUNT(*) < 49 THEN 'moderate'
 		ELSE 'active'
@@ -30,7 +37,9 @@ SELECT a.*, user_category
 FROM daily_activity a
 JOIN new_daily_activity b on a.user_id = b.user_id;
 ```
-And saved the table in .xlsx format to use it in Tableau. Additionally, for the same purpose, I added this segmentation to "hourly_steps" table and saved it accordingly:
+And saved the table in .xlsx format to use it in Tableau. 
+
+Additionally, for the same purpose, I added this segmentation to "hourly_steps" table and saved it accordingly:
 
 ```
 WITH new_hourly_steps AS
@@ -45,4 +54,4 @@ SELECT a.*, user_category
 FROM hourly_steps a
 JOIN new_hourly_steps b on a.user_id = b.user_id;
 ```
-
+With these new saved tables, I proceeded with the analysis in Tableau to explore and interpret data.
