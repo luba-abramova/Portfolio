@@ -1,7 +1,8 @@
-# SQL tasks
-This project is based on resolving tasks provided by SQL Academy, utilizing the MySQL database "Airbnb" as the primary dataset for analysis and exploration.
+# SQL tasks - Airbnb
+This project is based on resolving tasks provided by [SQL Academy](https://sql-academy.org/en), utilizing the MySQL database "Airbnb" as the primary dataset for analysis and exploration.
 
 Data model:
+
 ![Data model](/SQL%20challenges/data_model.png)
 
 Tasks:
@@ -76,3 +77,125 @@ GROUP BY res.room_id;
 ```
 
 8. Display a list of rooms with all amenities (TV, Internet, kitchen, and air conditioning), as well as the total number of days and the amount for all days of renting each of these rooms. Fields in the resulting table: home_type, address, days, total_fee
+```
+SELECT home_type,
+	address,
+	IFNULL(SUM(TIMESTAMPDIFF(DAY, start_date, end_date)), 0) as days,
+	IFNULL(SUM(total), 0) as total_fee
+FROM Rooms r
+	LEFT JOIN Reservations re on r.id = re.room_id
+WHERE has_air_con = 1
+	AND has_internet = 1
+	AND has_kitchen = 1
+	AND has_tv = 1
+GROUP BY home_type,
+	address;
+```
+9. It is necessary to categorize rooms into economy, comfort, premium at a price <= 100, 100 < price < 200, >= 200, respectively. As a result, display a table with the name of the category and the number of housing falling into this category.
+```
+SELECT CASE
+		WHEN price <= 100 THEN 'economy'
+		WHEN price > 100
+		AND price < 200 THEN 'comfort'
+		WHEN price >= 200 THEN 'premium'
+	END as category,
+	COUNT(*) as count
+FROM Rooms
+GROUP BY category;
+```
+10. Print the average booking price per day for each of the rooms that have been booked at least once. The average cost must be rounded up to an integer value.
+```
+SELECT room_id,
+	CEILING(AVG(price)) as avg_price
+FROM Reservations
+GROUP BY room_id;
+```
+11. Print the id of those rooms that have been rented an odd number of times.
+```
+SELECT room_id,
+	COUNT(*) as count
+FROM Reservations
+GROUP BY room_id
+HAVING MOD(count, 2) != 0;
+```
+12. Display the names of all users of the booking service, as well as the status of whether the user is the owner of the housing and whether he has rented the housing at least once. If the user has the specified status, display 1 in the appropriate field, otherwise 0.
+```
+SELECT name,
+	IF(id IN (
+			SELECT owner_id
+			FROM Rooms),
+		1,
+		0) as is_owner,
+	IF(id IN (
+			SELECT user_id
+			FROM Reservations),
+		1,
+		0) as is_tenant
+FROM Users;
+```
+13. Display all users with email in "hotmail.com". Fields in the resulting table: *
+```
+SELECT *
+FROM Users
+WHERE email LIKE '%@hotmail.com';
+```
+14. Output the fields id, home_type, price for all residential units from the Rooms table. If the room has a TV and Internet at the same time, then display the price in the price field, applying a 10% discount.
+```
+SELECT id,
+	home_type,
+	IF(has_tv AND has_internet, price * 0.9, price) as price
+FROM Rooms;
+```
+15. Create a "Verified_Users" view with id, name and email fields that will only show users who have a verified email address.
+```
+CREATE VIEW Verified_Users AS
+SELECT id,
+	name,
+	email
+FROM Users
+WHERE email_verified_at IS NOT NULL;
+```
+16. For each room selected at least 1 time, find the name of the person who last rented it and used it when they checked out.
+```
+WITH max_date as(
+	SELECT room_id,
+		MAX(end_date) as end_date
+	FROM Reservations
+	GROUP BY room_id
+)
+SELECT r.room_id,
+	u.name,
+	r.end_date
+FROM max_date m
+	JOIN Reservations r on m.room_id = r.room_id
+	AND m.end_date = r.end_date
+	JOIN Users u on r.user_id = u.id;
+```
+17. Display the identifiers of all the owners of the rooms that are placed on our service for choosing accommodation and the value they have earned.
+```
+SELECT r.owner_id,
+	IFNULL(SUM(res.total), 0) as total_earn
+FROM Rooms r
+	LEFT JOIN Reservations res on r.id = res.room_id
+GROUP BY r.owner_id;
+```
+18. Find what percentage of users registered on the booking service have rented or rented out a property at least once. Round the result to the nearest hundredth.
+```
+SELECT ROUND(
+		(
+			SELECT COUNT(*)
+			FROM (
+					SELECT DISTINCT owner_id
+					FROM Rooms r
+						JOIN Reservations res ON r.id = res.room_id
+					UNION
+					SELECT user_id
+					FROM Reservations
+				) active_users
+		) * 100 / (
+			SELECT COUNT(*)
+			FROM Users
+		),
+		2
+	) AS percent;
+```
