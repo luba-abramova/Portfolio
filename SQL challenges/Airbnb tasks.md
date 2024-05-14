@@ -39,8 +39,7 @@ ORDER BY count DESC, domain;
 5. Add a 5-star comment on housing located at 11218 Friel Place, New York on behalf of George Clooney
 ```
 INSERT INTO Reviews
-SET id = (SELECT COUNT(*) + 1
-		FROM Reviews AS a),
+SET id = (SELECT COUNT(*) + 1 FROM Reviews AS a),
 	rating = '5',
 	reservation_id = (SELECT re.id
 		FROM Reservations re
