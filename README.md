@@ -31,4 +31,9 @@ Tools: Excel, SQL, MS SQL, and Tableau.
 3. [Data Analysis: audience segmentation](https://github.com/luba-abramova/Portfolio/blob/main/Bellabeat/3_Data%20analysis.md)
 4. [Dashboard in Tableau](https://github.com/luba-abramova/Portfolio/blob/main/Bellabeat/4_Dashboard%20in%20Tableau.md)
 
+## [SQL challenges](https://github.com/luba-abramova/Portfolio/tree/main/SQL%20challenges)
+Here I practice tackling SQL problems and publish my solutions.
+
+1. [Airbnb tasks](https://github.com/luba-abramova/Portfolio/blob/main/SQL%20challenges/Airbnb%20tasks.md). Tools: SQL, MySQL.
+
 
