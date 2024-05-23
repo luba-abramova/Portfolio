@@ -69,7 +69,7 @@ The client has sent 7 data sets. For our analysis to find the top 5 categories w
 
 In this project, I chose quick and simple Excel charts. I adjusted the color and text size directly in the presentation for a better visual appeal.
 
-The Power Point presentation is available [here](/Accenture%20case/Social%20Buzz%20Top%20Categories.pdf) (formatted as a PDF).
+The Power Point presentation is available [here](/Accenture%20case/Social%20Buzz%20Top%20Categories.pdf) (formatted as a PDF). The presentation template was provided in the task.
 
 ![](/Accenture%20case/excel_charts.png)
 
