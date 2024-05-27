@@ -32,5 +32,7 @@ Tools: Excel, SQL, MS SQL, and Tableau.
 Here I practice tackling SQL problems and publish my solutions.
 
 1. [Airbnb tasks](https://github.com/luba-abramova/Portfolio/blob/main/SQL%20challenges/Airbnb%20tasks.md). Tools: SQL, MySQL.
+2. [DataCamp Projects](https://github.com/luba-abramova/Portfolio/blob/main/SQL%20challenges/DataCamp%20projects.md).
+Tools: SQL, PostgreSQL.
 
 
