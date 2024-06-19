@@ -27,6 +27,10 @@ Analyzed smart device usage data from 35 respondents who utilized Bellabeat's ac
 
 Tools: Excel, SQL, MS SQL, and Tableau.
 
+## [Project 4](https://github.com/luba-abramova/Portfolio/blob/main/Data%20Professional%20Survey/Data%20Cleaning.md): Data Professional Survey Analysis
+Analyzed survey results, including demographics and job satisfaction data, from 630 Data Professionals and visualized the findings on a Power BI dashboard.
+
+Tools: Excel, Power BI.
 
 ## [SQL challenges](https://github.com/luba-abramova/Portfolio/tree/main/SQL%20challenges)
 Here I practice tackling SQL problems and publish my solutions.
