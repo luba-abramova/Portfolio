@@ -2,7 +2,7 @@
 
 I created an interactive Power BI dashboard to visualize the survey results. Each component on the dashboard functions as a filter for the entire page. Since I am unable to publish the dashboard itself, I have included a screenshot for reference.
 
-![](/Data%20Professional%20Survey/screenshots/data_viz.png)
+![](/Data%20Professional%20Survey/screenshots/dashboard.png)
 
 Key insights from the dashboard:
 1) **Demographics**: there were more male respondents than female respondents, and more career switchers than non-switchers.
