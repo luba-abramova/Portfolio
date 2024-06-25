@@ -21,16 +21,16 @@
 
  Take a look at my projects here on GitHub. If you have any questions or would like to collaborate, please feel free to contact me! 
 
-## [Project 1](https://github.com/luba-abramova/Portfolio/blob/main/Cyclistic/1_Introduction.md): Maximizing Annual Memberships for Cyclistic
+## [Project 1](https://github.com/luba-abramova/Portfolio/blob/main/Cyclistic/1_Introduction.md): Customer Behavior Analysis for Cyclistic
 Analyzed historical data (5,5M+ rows) for a bike-sharing company Cyclistic, 
 visualizing trends to maximize the number of profitable annual members. 
 
 Tools: SQL, MS SQL, Excel, and Power BI.
 
 
-## [Project 2](https://github.com/luba-abramova/Portfolio/blob/main/Accenture%20case/project.md): Accenture Case - Top 5 Content Categories
+## [Project 2](https://github.com/luba-abramova/Portfolio/blob/main/Accenture%20case/project.md): Content Analysis for Accenture
 
-Applied my data analytics & visualization skills to advise a social media client on their content creation strategy as a Data Analyst at Accenture.
+Applied my data analytics & visualization skills to advise a social media client on their content creation strategy and identify the top 5 content categories as a Data Analyst at Accenture.
 
 Tools: Microsoft Excel, Power Point.
 
