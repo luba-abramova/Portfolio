@@ -1,6 +1,6 @@
 # Welcome to my GitHub profile!
 
- I am a passionate data analyst dedicated to uncovering insights and driving data-driven decisions. I am excited about the potential of data analytics to transform businesses and optimize decision-making processes. Explore my projects to see how I leverage data to create impactful solutions.
+ I am a passionate data analyst dedicated to uncovering insights and driving informed decisions. I am excited about the potential of data analytics to transform businesses and optimize decision-making processes. Explore my projects to see how I leverage data to create impactful solutions.
 
 ## :computer: Technical skills
 - **Spreadsheets**: Excel, Google Sheets
