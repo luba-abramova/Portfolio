@@ -13,7 +13,7 @@
 ## :mortar_board: Education
 
 - Bachelor's degree in Marketing, Master's degree in Commerce, NSUEM Russia
-- Completed Google Data Analytics Professional Certificate, Coursera
+- Google Data Analytics Specialization, Google Professional Certification hosted on Coursera
 - Certified Associate Data Analyst, DataCamp 
 
 ## :email: Let's connect! 
