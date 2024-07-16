@@ -14,7 +14,7 @@
 
 - Bachelor's degree in Marketing, Master's degree in Commerce, NSUEM Russia
 - Completed Google Data Analytics Professional Certificate, Coursera
--  DataCamp Certified Data Analyst (in progress) 
+- Certified Associate Data Analyst, DataCamp 
 
 ## :email: Let's connect! 
  My [LinkedIn](https://www.linkedin.com/in/liubovabramova/) :blush:
