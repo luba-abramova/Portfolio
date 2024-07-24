@@ -1,4 +1,4 @@
-## [Project 1](link): HR Data Analysis with Power BI for Atlas Labs
+## [Project 1](https://github.com/luba-abramova/Portfolio/tree/main/Atlas%20Labs%20HR%20Data%20Analysis): HR Data Analysis with Power BI for Atlas Labs
 Conducted in-depth analysis of employee demographic information, performance metrics and factors impacting employee attrition. The project focuses on importing, analyzing, and visualizing Human Resources data (1470 employees).
 
 
