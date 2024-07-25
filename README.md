@@ -22,6 +22,6 @@ Analyzed smart device usage data from 35 respondents who utilized Bellabeat's ac
 
 
 
-## [Project 5](https://github.com/luba-abramova/Portfolio/blob/main/Data%20Professional%20Survey/Data%20Cleaning.md): Data Professional Survey Analysis wih Excel and Power BI
+## [Project 5](https://github.com/luba-abramova/Portfolio/blob/main/Data%20Professional%20Survey/Data%20Cleaning.md): Data Professional Survey Analysis with Excel and Power BI
 Analyzed survey results, including demographics and job satisfaction data, from 630 Data Professionals and visualized the findings on a Power BI dashboard.
 
