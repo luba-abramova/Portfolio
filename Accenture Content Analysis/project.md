@@ -25,7 +25,7 @@ to prove to them that we are the best firm to work with. They are expecting the 
 
 The client has sent 7 data sets. For our analysis to find the top 5 categories with the largest aggregate popularity, I used three of them: Content, Reaction and ReactioType.
 
-![](/Accenture%20case/screenshots/data_model.png)
+![](/Accenture%20Content%20Analysis/screenshots/data_model.png)
 
 ### I performed data cleaning as follows:
 
@@ -34,7 +34,7 @@ The client has sent 7 data sets. For our analysis to find the top 5 categories w
 - Deleted the User ID column, as it was not needed for the analysis.
 - Addressed duplicates in the "Category" column: some names were with quotation marks and some were not. Replaced those with quotation marks using the Find and Replace function.
 
-![](/Accenture%20case/screenshots/quotation_marks.png)
+![](/Accenture%20Content%20Analysis/screenshots/quotation_marks.png)
 
 
 **Reactions** table:
@@ -42,7 +42,7 @@ The client has sent 7 data sets. For our analysis to find the top 5 categories w
 - Deleted User ID column, as we won’t work with this data.
 - Deleted null values in Reaction Type column.
 
-![](/Accenture%20case/screenshots/blank_types.png)
+![](/Accenture%20Content%20Analysis/screenshots/blank_types.png)
 
 **ReactionTypes** table:
 - Changed column name “Type” to “Reaction Type”.
@@ -53,7 +53,7 @@ The client has sent 7 data sets. For our analysis to find the top 5 categories w
 
 2. To merge "Content" with "Reactions", and "ReactionTypes" with "Reactions" used VLOOKUP formulas:
 
-![](/Accenture%20case/screenshots/vlookup.png)
+![](/Accenture%20Content%20Analysis/screenshots/vlookup.png)
 
 3. Copied and pasted the new columns "Content Type", "Category", "Sentiment", and "Score" as values.
 
@@ -61,7 +61,7 @@ The client has sent 7 data sets. For our analysis to find the top 5 categories w
 
 5. Created a new sheet "Categories". Copied categories there, and used SUMIF function to calculate the total score, then sorted and highlighted the top 5 categories. Saved as values.
 
-![](/Accenture%20case/screenshots/sumif.png)
+![](/Accenture%20Content%20Analysis/screenshots/sumif.png)
 
 6. Saved top 5 categories on a new sheet.
 
@@ -69,7 +69,7 @@ The client has sent 7 data sets. For our analysis to find the top 5 categories w
 
 In this project, I chose quick and simple Excel charts. I adjusted the color and text size directly in the presentation for a better visual appeal.
 
-The Power Point presentation is available [here](/Accenture%20case/Social%20Buzz%20Top%20Categories.pdf) (formatted as a PDF). The presentation template was provided in the task.
+The Power Point presentation is available [here](/Accenture%20Content%20Analysis/Social%20Buzz%20Top%20Categories.pdf) (formatted as a PDF). The presentation template was provided in the task.
 
-![](/Accenture%20case/excel_charts.png)
+![](/Accenture%20Content%20Analysis/screenshots/excel_charts.png)
 
