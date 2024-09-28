@@ -57,8 +57,7 @@ The client has sent 7 data sets. For our analysis to find the top 5 categories w
 
 3. Copied and pasted the new columns "Content Type", "Category", "Sentiment", and "Score" as values.
 
-4. Renamed this sheet as "Merged Data", deleted "Content" and "ReactionType" sheets. The final table contains 25552 rows.
-![image](https://github.com/user-attachments/assets/a2111d37-7688-4f19-834e-b142ff522170)
+4. Renamed this sheet as "Merged Data", deleted "Content" and "ReactionType" sheets. The final table contains 24574 rows.
 
 5. Created a new sheet "Categories". Copied categories there, and used SUMIF function to calculate the total score, then sorted and highlighted the top 5 categories. Saved as values.
 
